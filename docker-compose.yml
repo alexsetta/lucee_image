@@ -1,0 +1,10 @@
+lucee:
+  image: 
+    lucee/lucee:5.3-nginx
+  environment:
+    - VIRTUAL_HOST=lucee-dockerfiles.*
+  volumes:
+    - ./www/:/var/www
+  ports: 
+    - "8853:8888"
+    - "8053:80"
